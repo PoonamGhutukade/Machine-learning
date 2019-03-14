@@ -1,7 +1,7 @@
 # Array -> It is similar to list, but in array all contents have similar type.We have to import array
 
 from array import *
-from Utility.Util import UtilClass
+from Week2.Utility.Util import UtilClass
 import re
 """ Python does not have built-in support for Arrays, but Python Lists can be used instead."""
 
