@@ -1,13 +1,13 @@
 
 from Week3.Utility.Util import UtilClass
-import re
 
 
 class Probability:
     # class constructor
     def __init__(self):
-        # private variable for Sample space
+        # private variable __card for Sample space
         self.__cards = 52
+        # Util class object created to call method from that class
         self.obj = UtilClass()
 
     def calling(self):
