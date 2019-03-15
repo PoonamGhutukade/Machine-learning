@@ -15,7 +15,7 @@ class Probability:
         # outcomes
         ace = 4
         # round up value is up to 2 decimal
-        print("\nProbability of ace: ", round(self.obj.aceprobability(ace, self.__cards), 2), '%')
+        print("\nProbability of ace: ", round(self.obj.probability(ace, self.__cards), 2), '%')
 
 
 # create class object to call its method
