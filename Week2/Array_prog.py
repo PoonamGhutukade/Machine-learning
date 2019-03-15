@@ -9,7 +9,6 @@ import re
 class ArrayProgram:
     # Utilityclass object is created to store and retrieve its values from that class
     obj1 = UtilClass()
-
     print("------------------------------------------")
 
     while True:
@@ -69,7 +68,6 @@ class ArrayProgram:
                 else:
                     print("Give proper input")
                     continue
-
             else:
                 raise ValueError
         except ValueError as e:
