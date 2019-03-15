@@ -1,7 +1,6 @@
 
 import re
-from Utility.Util import UtilClass
-
+from Week2.Utility.Util import UtilClass
 
 class ListOpertn:
     # class or static list
