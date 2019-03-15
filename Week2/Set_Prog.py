@@ -161,7 +161,6 @@ class SetProg:
                 else:
                     print("Give proper input")
                     break
-
             else:
                 raise ValueError
         except ValueError as e:
