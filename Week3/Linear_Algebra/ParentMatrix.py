@@ -10,5 +10,5 @@ class Parent:
                         [4, 5, 6],
                         [7, 8, 9]]
 
+# obj = Parent()
 
-#obj = Parent()
