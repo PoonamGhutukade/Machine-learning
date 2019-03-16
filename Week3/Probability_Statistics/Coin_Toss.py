@@ -7,7 +7,7 @@ import re
 from Week3.Utility.Util import UtilClass
 
 
-class Acepro:
+class CoinToss:
 
     # class constructor
     def __init__(self):
@@ -111,6 +111,6 @@ class Acepro:
 
 
 # class object created
-obj1 = Acepro()
+obj1 = CoinToss()
 # call class method through its object
 obj1.colling1()
