@@ -1,4 +1,4 @@
-"""What is the probability that it's not raining and there is heavy traffic and I am not late?
+"""5 .What is the probability that it's not raining and there is heavy traffic and I am not late?
 What is the probability that I am late?
 Given that I arrived late at work, what is the probability that it rained that day?
 """
@@ -19,18 +19,28 @@ class AllValues:
         # rainy not traffic = 1- 1/2 = 1/2
         self.rainy_not_traffic = 1 / 2
 
+        # rainy * traffic * late = (1/3 * 1/2 *1/2) = 1/12
         self.rainy_traffic_late = 1 / 12
+        # rainy * traffic * not_late = (1/3 * 1/2 * 1/2) = 1 / 12
         self.rainy_traffic_not_late = 1 / 12
+        # rainy * not_traffic * late = (1/3 * 1/2 * 1/4) = 1 / 24
         self.rainy_not_traffic_late = 1 / 24
+        # rainy * not_traffic * not_late = (1/3 * 1/2 * 3/4) = 3/24 =  1/8
         self.rainy_not_traffic_not_late = 1 / 8
 
         self.not_rainy_traffic = 1 / 4
         self.not_rainy_not_traffic = 3 / 4
 
+        # not_rainy * traffic * late = (2/3 * 1/4 * 1/4) = 1/24
         self.not_rainy_traffic_late = 1 / 24
+
         self.not_rainy_traffic_not_late = 3 / 4
+
+        # not_rainy * traffic * not_late = (2/3 * 1/4 * 3/4) =  1/8
         self.prob_not_rainy_traffic_not_late = 1/8
+        # not_rainy * not_traffic * late = (2/3 * 3/4 * 1/8) =  1/16
         self.not_rainy_not_traffic_late = 1 / 16
+        # not_rainy * not_traffic * not_late = (2/3 * 3/4 * 7/8) =  7/16
         self.not_rainy_not_traffic_not_late = 7 / 16
 
 
@@ -48,7 +58,7 @@ class ProbOfRainTrafficLate(AllValues):
                 print()
                 print("1.  probability that it's not raining and there is heavy traffic and I am not late ""\n"
                       "2. What is the probability that I am late"
-                      "\n""3. yI arrived late at work, what is the probability that it rained that day ""\n"
+                      "\n""3. I arrived late at work, what is the probability that it rained that day ""\n"
                       "4. Exit")
                 ch = input("Enter choice:")
                 choice = int(ch)
