@@ -1,5 +1,10 @@
+"""Write a program to find probability of drawing an ace from pack of cards
+Write a program to find the probability of drawing an ace after drawing a king on the first draw
+Write a program to find the probability of drawing an ace after drawing an ace on the first draw
+"""
 from Week3.Utility.Util import UtilClass
 import re
+
 
 class Probability:
     # class constructor
