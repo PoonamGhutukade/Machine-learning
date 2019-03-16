@@ -14,7 +14,7 @@ class CoinToss:
         # Util class object created to call method from that class
         self.obj = UtilClass()
 
-    def colling1(self):
+    def calling1(self):
 
         while True:
             try:
@@ -101,7 +101,7 @@ class CoinToss:
                         break
                     else:
                         print("Give proper input")
-                        continue
+                        break
 
                 else:
                     raise ValueError
@@ -113,4 +113,4 @@ class CoinToss:
 # class object created
 obj1 = CoinToss()
 # call class method through its object
-obj1.colling1()
+obj1.calling1()
