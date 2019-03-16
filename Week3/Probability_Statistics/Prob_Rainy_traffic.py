@@ -34,11 +34,11 @@ class AllValues:
         self.not_rainy_not_traffic_not_late = 7 / 16
 
 
-class ProbOf_Rain_Traffic_Late(AllValues):
+class ProbOfRainTrafficLate(AllValues):
     # class constructor created
     def __init__(self):
         # from super class, init method override
-        super(ProbOf_Rain_Traffic_Late, self).__init__()
+        super(ProbOfRainTrafficLate, self).__init__()
         self.obj1 = UtilClass()
 
     def calling1(self):
@@ -92,7 +92,7 @@ class ProbOf_Rain_Traffic_Late(AllValues):
                         break
                     else:
                         print("Give proper input")
-                        continue
+                        break
 
                 else:
                     raise ValueError
@@ -101,5 +101,5 @@ class ProbOf_Rain_Traffic_Late(AllValues):
                 print("\nInvalid Input", e)
 
 
-obj = ProbOf_Rain_Traffic_Late()
+obj = ProbOfRainTrafficLate()
 obj.calling1()
