@@ -19,7 +19,7 @@ class Bank:
         # z_score1 = (l_x1 - l_mean * l_n) / (l_standard_deviation * (l_n ** 0.5))
         z_score1 = (self.value_1 - self.mean * self.value_n) / (self.sd * (self.value_n ** 0.5))
         z_score2 = (self.value_2 - self.mean * self.value_n) / (self.sd * (self.value_n ** 0.5))
-        return z_score1,z_score2
+        return z_score1, z_score2
 
 
 obj = Bank()
