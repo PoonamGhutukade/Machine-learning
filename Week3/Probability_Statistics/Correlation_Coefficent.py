@@ -8,7 +8,7 @@ import math
 
 
 # function that returns correlation coefficient.
-def correlationCoefficient(X, Y, n):
+def correlation_coefficient(X, Y, n):
     sum_of_x = 0
     sum_of_y = 0
     sum_of_xy = 0
@@ -53,4 +53,4 @@ Y = [90, 85, 88, 100, 105, 98, 70, 65, 72]
 n = len(X)
 
 # Function call to correlationCoefficient.
-print("\ncorrelation coefficient:", '{0:.6f}'.format(correlationCoefficient(X, Y, n)))
+print("\ncorrelation coefficient:", '{0:.6f}'.format(correlation_coefficient(X, Y, n)))
