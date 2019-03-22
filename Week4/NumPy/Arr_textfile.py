@@ -44,4 +44,5 @@ class StoreArray:
 
 # class Object created to call its methods
 obj = StoreArray()
+
 obj.calling()
