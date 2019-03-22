@@ -1,8 +1,5 @@
 """
 3. Write a Python program to create a null vector of size 10 and update sixth value to 11.
-[ 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]
-Update sixth value to 11
-[ 0. 0. 0. 0. 0. 0. 11. 0. 0. 0.]
 """
 from Week4.Utility.Util import UtilClass
 import re
