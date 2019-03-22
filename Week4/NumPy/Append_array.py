@@ -26,5 +26,4 @@ class ArrayAppend:
 
 # class object created to call its methods
 obj = ArrayAppend()
-
 print("Append Array: ", obj.append_array())
