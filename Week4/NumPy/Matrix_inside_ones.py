@@ -1,18 +1,5 @@
 """
-6. Write a Python program to add a border (filled with 0's) around an existing array.
-Expected Output:
-Original array:
-[[ 1. 1. 1.]
-[ 1. 1. 1.]
-[ 1. 1. 1.]]
-1 on the border and 0 inside in the array
-[[ 0. 0. 0. 0. 0.]
-[ 0. 1. 1. 1. 0.]
-[ 0. 1. 1. 1. 0.]
-[ 0. 1. 1. 1. 0.]
-[ 0. 0. 0. 0. 0.]]
-
-"""
+6. Write a Python program to add a border (filled with 0's) around an existing array."""
 from Week4.Utility.Util import UtilClass
 import re
 import numpy as np
