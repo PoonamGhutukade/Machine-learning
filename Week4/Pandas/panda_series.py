@@ -81,5 +81,6 @@ class PandaSeries:
                 print("\nInvalid Input", e)
 
 
+# create class object to call its methods
 obj = PandaSeries()
 obj.calling()
