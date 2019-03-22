@@ -6,7 +6,6 @@ Reverse array:
 [37 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12]
 """
 from Week4.Utility.Util import UtilClass
-
 import re
 
 
@@ -18,7 +17,9 @@ class NumpyClass1:
     def calling(self):
         print("\nPut values from 12 to 37 to reverse array ")
         # It display number from 12 to 37
-        array_created = self.obj1.matrix_creation()
+        input1 = input("\nEnter the matrix start value:")
+        input2 = input("Enter the matrix end value:")
+        array_created = self.obj1.matrix_creation(input1, input2)
         str1 = str(array_created)
         if re.match(str1, 'None'):
             print("Output will not display")

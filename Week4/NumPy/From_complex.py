@@ -17,7 +17,7 @@ class ComplexClass:
     # append two array
     arr3v = array1 + arr2
 
-    def real_and_imag(self):
+    def display_real_and_imag(self):
         # show real part
         print("\nReal Part:", self.arr3v.real)
         # show imaginary part
@@ -26,4 +26,4 @@ class ComplexClass:
 
 # create object of out class
 obj = ComplexClass()
-obj.real_and_imag()
+obj.display_real_and_imag()

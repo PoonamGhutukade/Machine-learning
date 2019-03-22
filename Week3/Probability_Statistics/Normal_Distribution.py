@@ -60,54 +60,59 @@ class NormalDistribution(StoreValues):
             prob1 = self.z_third - 0.5
             print("P (30 < X < 35) is: ", prob1)
 
+    def calling(self):
+        while True:
+            try:
+                print()
+                print("1. Probability  P(x < 40)""\n"
+                      "2. P(x > 21)"
+                      "\n""3. P(30 < x < 35) ""\n"
+                      "4. Exit")
+                ch = input("Enter choice:")
+                choice = int(ch)
+                if ch.isdigit():
+                    if choice == 1:
+                        obj.calculate_probability()
+                        print("_______________________________________________________________________________")
+
+                    elif choice == 2:
+                        obj.calculate_probability1()
+                        print("_______________________________________________________________________________")
+
+                    elif choice == 3:
+                        obj.calculate_probability2()
+
+                        print("_______________________________________________________________________________")
+
+                    else:
+                        print("Plz enter valid choice: ")
+
+                    acc = str(input("IF you want to continue: type yes "))
+                    # if acc == 'y' and acc == 'yes':
+                    if re.match(acc, 'y'):
+                        continue
+                    elif re.match(acc, 'yes'):
+                        continue
+                    elif re.match(acc, 'n'):
+                        break
+                    elif re.match(acc, 'no'):
+                        break
+                    else:
+                        print("Give proper input")
+                        break
+
+                else:
+                    raise ValueError
+
+            except ValueError as e:
+                print("\nInvalid Input", e)
+
 
 # class Object created to call its methods
 obj = NormalDistribution()
+obj.calling()
 
-while True:
-    try:
-        print()
-        print("1. Probability  P(x < 40)""\n"
-              "2. P(x > 21)"
-              "\n""3. P(30 < x < 35) ""\n"
-              "4. Exit")
-        ch = input("Enter choice:")
-        choice = int(ch)
-        if ch.isdigit():
-            if choice == 1:
-                obj.calculate_probability()
-                print("_______________________________________________________________________________")
 
-            elif choice == 2:
-                obj.calculate_probability1()
-                print("_______________________________________________________________________________")
 
-            elif choice == 3:
-                obj.calculate_probability2()
-
-                print("_______________________________________________________________________________")
-
-            else:
-                print("Plz enter valid choice: ")
-
-            acc = str(input("IF you want to continue: type yes "))
-            # if acc == 'y' and acc == 'yes':
-            if re.match(acc, 'y'):
-                continue
-            elif re.match(acc, 'yes'):
-                continue
-            elif re.match(acc, 'n'):
-                break
-            elif re.match(acc, 'no'):
-                break
-            else:
-                print("Give proper input")
-                break
-
-        else:
-            raise ValueError
-
-    except ValueError as e:
-        print("\nInvalid Input", e)
 
 

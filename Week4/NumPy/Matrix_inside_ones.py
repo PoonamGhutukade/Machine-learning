@@ -27,7 +27,9 @@ class Matrix:
     def calling(self):
         print("\nPut values from 1 to 9  ")
         # It display number from 1 to 9
-        array_created = self.obj1.matrix_creation()
+        input1 = input("\nEnter the matrix start value:")
+        input2 = input("Enter the matrix end value:")
+        array_created = self.obj1.matrix_creation(input1, input2)
         str1 = str(array_created)
         # check output correct or not
         if re.match(str1, 'None'):
@@ -36,7 +38,9 @@ class Matrix:
             # print("\nNew Matrix:\n", array_created)
             print("\n 3 * 3 Dimension matrix")
             matrix_of_one = self.obj1.matrix_one_creation(array_created)
-            result = self.obj1.reshape_matrix(matrix_of_one)
+            num1 = input("Enter the 1st dimension:")
+            num2 = input("Enter the 2nd dimension:")
+            result = self.obj1.reshape_matrix(matrix_of_one, num1, num2)
             str2 = str(result)
 
             if re.match(str2, 'None'):
