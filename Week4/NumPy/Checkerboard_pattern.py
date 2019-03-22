@@ -1,16 +1,6 @@
 """
 7. Write a Python program to create a 8x8 matrix and fill it with a checkerboard pattern.
-Checkerboard pattern:
-[[0 1 0 1 0 1 0 1]
-[1 0 1 0 1 0 1 0]
-[0 1 0 1 0 1 0 1]
-[1 0 1 0 1 0 1 0]
-[0 1 0 1 0 1 0 1]
-[1 0 1 0 1 0 1 0]
-[0 1 0 1 0 1 0 1]
-[1 0 1 0 1 0 1 0]]
-
-"""
+Checkerboard pattern:"""
 from Week4.Utility.Util import UtilClass
 import re
 
