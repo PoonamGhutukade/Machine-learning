@@ -5,7 +5,7 @@ Original array:
 New flattened array:
 [10 20 30 20 40 50]
  """
-import numpy as np
+
 import re
 from Week4.Utility.Util import UtilClass
 
