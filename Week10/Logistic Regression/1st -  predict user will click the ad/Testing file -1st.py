@@ -37,7 +37,7 @@ import importlib.util
 spec = importlib.util.spec_from_file_location("Util_class", "/home/admin1/PycharmProjects/Machine-Learning/Week10/Util/util.py")
 foo = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(foo)
-# creating object of Template class
+# creating object of templates class
 obj_util = foo.Util_class()
 
 
