@@ -1,6 +1,4 @@
-#importing the libraries
-# from sklearn.metrics import accuracy_score, f1_score, precision_score, recall_score, classification_report, confusion_matrix
-#importing the libraries
+#import the libraries
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib import pyplot as plt  
@@ -10,15 +8,20 @@ from sklearn.preprocessing import Imputer
 from sklearn.model_selection import train_test_split
 # handle categorical data
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder
+#For feature scaling
 from sklearn.preprocessing import StandardScaler
 
 #Classification library
 from sklearn.linear_model import LogisticRegression
 #confusion matix
-from sklearn.metrics import confusion_matrix 
+from sklearn import metrics
+from sklearn.metrics import confusion_matrix
 #visualisation
 from matplotlib.colors import ListedColormap
-
+# for encoding
+from sklearn.preprocessing import LabelEncoder, OneHotEncoder
+from sklearn import preprocessing 
+from collections import defaultdict
 #o check accuracy
 from sklearn.metrics import accuracy_score
 # calculate accuracy
@@ -55,6 +58,23 @@ class Util_class:
 
         print("train_data : ", train_data.shape, " crossV_data : ", crossV_data.shape)
         
+    # Handle categorical data
+    def Categorical_data(self,df_new):
+        # from collections import defaultdict
+        d = defaultdict(LabelEncoder)
+        # Encoding the variable
+        fit = df_new.apply(lambda x: d[x.name].fit_transform(x))
+        # Inverse the encoded
+        fit.apply(lambda x: d[x.name].inverse_transform(x))
+        # Using the dictionary to label future data
+        df_new.apply(lambda x: d[x.name].transform(x))
+        # one hot encoding
+        obj_oneh = OneHotEncoder()
+        obj_oneh.fit(df_new)
+        new_dataset = obj_oneh.transform(df_new).toarray()
+        
+        return new_dataset
+    
     
     # predict y on given y data
     def y_prediction(self,x_data,classifier):
@@ -83,7 +103,7 @@ class Util_class:
 #         print(x_set[:10],'\n',y_set[:10],'\n')
 #         print(x_set.shape)
         for i,j in enumerate(np.unique(y_set)):
-            plt.scatter(x_set[y_set == j,0], x_set[y_set == j,1],c = ListedColormap(("yellow", "blue"))(i),label = j)
+            plt.scatter(x_set[y_set == j,0], x_set[y_set == j,1],c = ListedColormap(("cyan", "blue"))(i),label = j)
 
         plt.title(title)
         plt.xlabel(xlabel)
@@ -91,6 +111,11 @@ class Util_class:
         plt.legend()
         plt.show()
     
+    #create confusion matrix
+    def confusion_matrix(self,y_train,y_pre):
+        return confusion_matrix(y_train,y_pre)
+    
+   
      # create pickle file dump it with module obj and file object
     def create_piklefile(self,classifier, file_name):
         # dump train model pickle file
@@ -99,4 +124,3 @@ class Util_class:
         file.close() 
         
 
-        
