@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+
 """
 a simple implementation of Apriori algorithm by Python.
 """
